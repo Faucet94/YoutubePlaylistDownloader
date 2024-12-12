@@ -1,0 +1,4 @@
+﻿Version 1.9.25:
+- Fixed 403 Error
+- Fixed bulk download not working
+- Updated translations

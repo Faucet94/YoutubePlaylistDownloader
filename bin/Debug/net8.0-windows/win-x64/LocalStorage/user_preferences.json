@@ -1,0 +1,11 @@
+{
+  "DefaultDownloadPath": "C:\\Users\\Dallian\\Videos",
+  "PreferredQuality": "1080p",
+  "PreferredFormat": "mp4",
+  "AutomaticallyDownloadSubtitles": false,
+  "PreferredLanguage": "en",
+  "EnableGlassMorphism": true,
+  "GlassOpacity": 0.1,
+  "MaxConcurrentDownloads": 3,
+  "LastUpdateCheck": "2024-12-12T01:43:29.4433215-03:00"
+}

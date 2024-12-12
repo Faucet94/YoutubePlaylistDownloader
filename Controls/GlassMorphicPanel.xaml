@@ -1,0 +1,15 @@
+<UserControl x:Class="YoutubePlaylistDownloader.Controls.GlassMorphicPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Border x:Name="GlassPanel" 
+            CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=UserControl}}"
+            BorderThickness="1">
+        <Border.Background>
+            <SolidColorBrush x:Name="GlassBackground" Color="White" Opacity="0.1"/>
+        </Border.Background>
+        <Border.Effect>
+            <BlurEffect Radius="10"/>
+        </Border.Effect>
+        <ContentPresenter/>
+    </Border>
+</UserControl> 
