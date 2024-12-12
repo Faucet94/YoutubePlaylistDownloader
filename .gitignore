@@ -1,0 +1,10 @@
+node_modules/  # Ignora o diretório node_modules (útil para projetos Node.js)
+.vscode/       # Ignora o diretório .vscode (configurações do Visual Studio Code)
+dist/           # Ignora o diretório dist (gerado em muitas compilações)
+*.log          # Ignora todos os arquivos com extensão .log
+*.tmp          # Ignora arquivos com extensão .tmp
+.env           # Ignora arquivos de variáveis de ambiente (muito usado em projetos Node.js ou Python)
+.DS_Store      # Ignora arquivos do sistema macOS
+Thumbs.db      # Ignora arquivos do sistema Windows
+build/         # Ignora o diretório build (gerado após a compilação do código)
+*.class        # Ignora arquivos de classe Java
