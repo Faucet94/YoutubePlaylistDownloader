@@ -19,7 +19,7 @@ jobs:
       - name: Configurando .NET
         uses: actions/setup-dotnet@v3  # Configura a versão do .NET
         with:
-          dotnet-version: '6.0'  # Ajuste para a versão do .NET que você está usando
+          dotnet-version: '8.0.404'  # Ajuste para a versão do .NET que você está usando
 
       - name: Restaurar dependências
         run: dotnet restore  # Restaura as dependências do seu projeto
