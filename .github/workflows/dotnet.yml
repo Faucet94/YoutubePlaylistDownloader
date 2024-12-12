@@ -1,0 +1,31 @@
+name: Build e Teste .NET
+
+on:
+  push:
+    branches:
+      - main  # Ações quando alguém fizer push na branch 'main'
+  pull_request:
+    branches:
+      - main  # Ações quando alguém abrir um PR para a branch 'main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Utiliza a versão mais recente do Ubuntu
+
+    steps:
+      - name: Verificando o código
+        uses: actions/checkout@v3  # Faz o checkout do código do repositório
+
+      - name: Configurando .NET
+        uses: actions/setup-dotnet@v3  # Configura a versão do .NET
+        with:
+          dotnet-version: '6.0'  # Ajuste para a versão do .NET que você está usando
+
+      - name: Restaurar dependências
+        run: dotnet restore  # Restaura as dependências do seu projeto
+
+      - name: Compilar o projeto
+        run: dotnet build --configuration Release  # Compila o projeto
+
+      - name: Rodar os testes
+        run: dotnet test  # Executa os testes do seu projeto

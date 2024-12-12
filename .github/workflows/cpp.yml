@@ -1,0 +1,32 @@
+name: Build e Teste C++
+
+on:
+  push:
+    branches:
+      - main  # Ações quando alguém fizer push na branch 'main'
+  pull_request:
+    branches:
+      - main  # Ações quando alguém abrir um PR para a branch 'main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Utiliza a versão mais recente do Ubuntu
+
+    steps:
+      - name: Verificando o código
+        uses: actions/checkout@v3  # Faz o checkout do código do repositório
+
+      - name: Instalar dependências
+        run: sudo apt-get install -y cmake g++  # Instala o CMake e o compilador g++
+
+      - name: Criar diretório de build
+        run: mkdir build && cd build  # Cria um diretório de build para o CMake
+
+      - name: Configurar o projeto com CMake
+        run: cmake ..  # Configura o projeto usando CMake
+
+      - name: Compilar o projeto
+        run: cmake --build .  # Compila o código usando CMake
+
+      - name: Rodar os testes (caso tenha)
+        run: ./tests  # Substitua isso pelo seu comando de execução de testes C++
