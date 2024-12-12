@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Utiliza a versão mais recente do Ubuntu
+    runs-on: windows-latest  # Utiliza a versão mais recente do Ubuntu
 
     steps:
       - name: Verificando o código
